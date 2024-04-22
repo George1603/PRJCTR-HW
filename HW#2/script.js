@@ -9,8 +9,8 @@ if (isNaN (UserNumber)) {
     alert ('Your data is not a number, enter number please:');
 } else {
     UserNumber = parseInt(UserNumber);
-    for (let example = 2; example < UserNumber; example += 2) {
-        console.log (example);
+    for (let processing_result = 2; processing_result < UserNumber; processing_result += 2) {
+        console.log (processing_result);
     }
 }
 
@@ -22,10 +22,10 @@ let CheckData = parseInt (User_Number);
 if (isNaN(CheckData)) {
     alert ('Your data is not a number, enter number please:');
 } else {
-    let example = 2;
-    while (example < CheckData) {
-        console.log (example);
-        example += 2;                
+    let endResult = 2;
+    while (endResult < CheckData) {
+        console.log (endResult);
+        endResult += 2;                
     }
 }
 
