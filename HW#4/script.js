@@ -11,7 +11,7 @@ console.log(typeof reverseMaxValue); // 'number'
 //2. Задача на знаходження добутку масиву чисел з невідомою глибиною вкладеності
 
 const resultsArray = [1, 2, [3, [4]]];
-let productOfArray = resultsArray.flat(Infinity).map(Number).reduce((prev, current) => {
+let productOfArray = resultsArray.flat(Infinity).reduce((prev, current) => {
     //console.log (prev, current);
     return prev * current;
 },
