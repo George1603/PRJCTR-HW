@@ -59,10 +59,10 @@ function someFunction (...args) {
 
 function slower(func, seconds) {
 	const ms = seconds * 1000;
-	return function() {
+	return (...args) => {
 		console.log("Chill out, you will get your result in 5 seconds");
 		setTimeout(() => {
-			let result = func.apply(this, arguments);
+			let result = func(...args);
 			console.log(result);
 		}, ms);		
 	};
