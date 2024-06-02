@@ -1,0 +1,39 @@
+body { 
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 1440px; */
+}
+
+.first-section {
+    background: #ffffff;   
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-btn{
+    color: white;
+    background: #ED4C5C;
+    border: 1.5px solid #ED4C5C;
+    height: 60px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    padding: 17px 34px;
+}
+
+.BTN_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
