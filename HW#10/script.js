@@ -30,7 +30,7 @@ function colorChanger (elem) {
 
 mainBtn.addEventListener('click', () => {
     colorChanger(sectionColor)
-    let DateDiv = document.querySelector('#ClickTimeDiv');
+    let dateDiv = document.querySelector('#ClickTimeDiv');
     let clickTime = new Date();
     function gettingCurrentDate(token) {
         return ("0" + token).slice(-2)
@@ -45,11 +45,11 @@ mainBtn.addEventListener('click', () => {
 
     if (mainBtn.textContent === 'Turn off') {
         mainBtn.textContent = 'Turn on';              
-        DateDiv.textContent = `Last turn off: ${result}`;       
+        dateDiv.textContent = `Last turn off: ${result}`;       
         localStorage.setItem(`Last turn off: `, result);
     } else {
         mainBtn.textContent = 'Turn off';                
-        DateDiv.textContent = `Last turn on: ${result}`;
+        dateDiv.textContent = `Last turn on: ${result}`;
         localStorage.setItem(`Last turn on: `, result);
     };
 });
