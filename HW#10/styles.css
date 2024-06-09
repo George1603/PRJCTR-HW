@@ -16,6 +16,10 @@ body {
     align-items: center;
 }
 
+.changed-section-color {
+    background: #2c2c2c;
+}
+
 #main-btn{
     color: white;
     background: #ED4C5C;
@@ -36,4 +40,8 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+}
+
+.dateDivTextColor {
+    color: #ffffff;
 }

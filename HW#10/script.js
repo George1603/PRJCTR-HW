@@ -10,38 +10,28 @@
 Стан кнопки та повідомлення останню зміну стану має зберігатись після перезавантаження/закриття сторінки (localStorage).*/
 
 const mainBtn = document.querySelector('#main-btn');
-const sectionColor = document.querySelector('.first-section');
+const sectionColor = document.querySelector('section');
 let storage = localStorage.getItem('Date storage') || 0;
 
 function colorChanger (elem) {
-    
-    if (elem.style.background === 'grey') {
-        elem.style.background = 'white';
-    } else {
-        elem.style.background = 'grey';
-    }
-    let event = new CustomEvent ('colorchanger', {
-        detail: {
-            background: 'grey'
-        }
-    });
-    elem.dispatchEvent(event);
+    elem.classList.toggle ('changed-section-color');
 };
 
 mainBtn.addEventListener('click', () => {
     colorChanger(sectionColor)
     let dateDiv = document.querySelector('#ClickTimeDiv');
+    dateDiv.classList.toggle('dateDivTextColor');
     let clickTime = new Date();
     function gettingCurrentDate(token) {
         return ("0" + token).slice(-2)
     }
-    let year = clickTime.getFullYear(),
-        month = gettingCurrentDate(clickTime.getMonth() + 1),
-        day = gettingCurrentDate(clickTime.getDate()),
-        hours = gettingCurrentDate(clickTime.getHours()),
-        minutes = gettingCurrentDate(clickTime.getMinutes()),
-        seconds = gettingCurrentDate(clickTime.getSeconds());    
-    let result = `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+    const year = clickTime.getFullYear();
+    const month = gettingCurrentDate(clickTime.getMonth() + 1);
+    const day = gettingCurrentDate(clickTime.getDate());
+    const hours = gettingCurrentDate(clickTime.getHours());
+    const minutes = gettingCurrentDate(clickTime.getMinutes());
+    const seconds = gettingCurrentDate(clickTime.getSeconds());    
+    const result = `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
 
     if (mainBtn.textContent === 'Turn off') {
         mainBtn.textContent = 'Turn on';              
