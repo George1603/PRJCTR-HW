@@ -10,7 +10,7 @@
 Стан кнопки та повідомлення останню зміну стану має зберігатись після перезавантаження/закриття сторінки (localStorage).*/
 
 const mainBtn = document.querySelector('#main-btn');
-const sectionColor = document.querySelector('section');
+const sectionColor = document.querySelector('.first-section');
 let storage = localStorage.getItem('Date storage') || 0;
 
 function colorChanger (elem) {
