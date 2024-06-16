@@ -1,0 +1,64 @@
+body { 
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.task-title {
+    color: azure;
+}
+
+.container {
+    width: 100%;    
+    /* max-width: 1440px; */
+    background-image: url(images/nightSky.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.create-task-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-task-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-task-block ul {
+    padding: 0;
+}
+
+.collection li {
+    color: aliceblue;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    color: white;
+    background: #4c57ed;
+    border: 1.5px solid #ebde2c;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0em;
+    padding: 17px 34px;
+}
